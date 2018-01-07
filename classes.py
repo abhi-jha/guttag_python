@@ -95,5 +95,6 @@ class Grades(object):
 		if not self.isSorted:
 			self.students.sort()
 			self.isSorted = True
-		return self.students[:]  #returns a copy of the list
-
+		#return self.students[:]  #returns a copy of the list
+		for s in self.students:
+			yield s
